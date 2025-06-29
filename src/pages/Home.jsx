@@ -47,7 +47,7 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: "14+", label: "Years of Service", icon: <Award size={24} /> },
+    { number: "11+", label: "Years of Service", icon: <Award size={24} /> },
     { number: "500K+", label: "Happy Customers", icon: <Users size={24} /> },
     { number: "99.5%", label: "On-Time Performance", icon: <Clock size={24} /> },
     { number: "4.8/5", label: "Customer Rating", icon: <Star size={24} /> }

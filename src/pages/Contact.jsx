@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
-import { companyInfo } from '../data/company';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,13 +26,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div style={{ backgroundColor: 'white' }}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+      <section className="hero">
+        <div className="container">
+          <div className="hero-content text-center">
+            <h1 className="hero-title">Contact Us</h1>
+            <p className="hero-subtitle">
               Get in touch with us for bookings, inquiries, or any assistance you need
             </p>
           </div>
@@ -41,73 +40,127 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+      <section className="section">
+        <div className="container">
+          <div className="grid grid-2" style={{ gap: '3rem' }}>
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-blue-600 mt-1" />
+              <h2 style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--gray-900)', marginBottom: '2rem' }}>
+                Get In Touch
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                  <Phone style={{ height: '1.5rem', width: '1.5rem', color: 'var(--primary-600)', marginTop: '0.25rem' }} />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">{companyInfo.contact.phone}</p>
-                    <p className="text-sm text-gray-500">Call center open daily</p>
+                    <h3 style={{ fontWeight: '600', color: 'var(--gray-900)', marginBottom: '0.25rem' }}>Phone</h3>
+                    <p style={{ color: 'var(--gray-600)', marginBottom: '0.25rem' }}>021 100 5126</p>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--gray-500)' }}>Call center open daily</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-blue-600 mt-1" />
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                  <Mail style={{ height: '1.5rem', width: '1.5rem', color: 'var(--primary-600)', marginTop: '0.25rem' }} />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">{companyInfo.contact.email}</p>
-                    <p className="text-sm text-gray-500">We respond within 24 hours</p>
+                    <h3 style={{ fontWeight: '600', color: 'var(--gray-900)', marginBottom: '0.25rem' }}>Email</h3>
+                    <p style={{ color: 'var(--gray-600)', marginBottom: '0.25rem' }}>Info@apmwesterncape.com</p>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--gray-500)' }}>We respond within 10 minutes</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-blue-600 mt-1" />
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                  <MapPin style={{ height: '1.5rem', width: '1.5rem', color: 'var(--primary-600)', marginTop: '0.25rem' }} />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600">{companyInfo.contact.address}</p>
-                    <p className="text-sm text-gray-500">Main office and terminal</p>
+                    <h3 style={{ fontWeight: '600', color: 'var(--gray-900)', marginBottom: '0.25rem' }}>Head Office</h3>
+                    <p style={{ color: 'var(--gray-600)', marginBottom: '0.25rem' }}>Old Marine Drive, Cape Town</p>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--gray-500)' }}>Main office and terminal</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <Clock className="h-6 w-6 text-blue-600 mt-1" />
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                  <Clock style={{ height: '1.5rem', width: '1.5rem', color: 'var(--primary-600)', marginTop: '0.25rem' }} />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Operating Hours</h3>
-                    <p className="text-gray-600">{companyInfo.contact.hours}</p>
-                    <p className="text-sm text-gray-500">Booking and customer service</p>
+                    <h3 style={{ fontWeight: '600', color: 'var(--gray-900)', marginBottom: '0.25rem' }}>Operating Hours</h3>
+                    <p style={{ color: 'var(--gray-600)', marginBottom: '0.25rem' }}>Monday - Sunday: 07:30 - 19:00</p>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--gray-500)' }}>Booking and customer service</p>
                   </div>
                 </div>
               </div>
 
               {/* Quick Actions */}
-              <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                  <MessageCircle className="h-5 w-5 text-blue-600 mr-2" />
+              <div style={{ 
+                marginTop: '2rem', 
+                padding: '1.5rem', 
+                backgroundColor: 'var(--primary-50)', 
+                borderRadius: '0.5rem' 
+              }}>
+                <h3 style={{ 
+                  fontWeight: '600', 
+                  color: 'var(--gray-900)', 
+                  marginBottom: '1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}>
+                  <MessageCircle style={{ height: '1.25rem', width: '1.25rem', color: 'var(--primary-600)' }} />
                   Quick Actions
                 </h3>
-                <div className="space-y-3">
-                  <a href={`tel:${companyInfo.contact.phone}`} 
-                     className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <a 
+                    href="tel:021-100-5126" 
+                    className="btn btn-primary"
+                    style={{ textDecoration: 'none', textAlign: 'center' }}
+                  >
                     Call Now for Bookings
                   </a>
-                  <a href={`mailto:${companyInfo.contact.email}`}
-                     className="block w-full text-center border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2 px-4 rounded-lg transition-colors">
+                  <a 
+                    href="mailto:Info@apmwesterncape.com"
+                    className="btn btn-outline"
+                    style={{ textDecoration: 'none', textAlign: 'center' }}
+                  >
                     Send Email
                   </a>
                 </div>
+              </div>
+
+              {/* Office Locations */}
+              <div style={{ 
+                marginTop: '2rem', 
+                padding: '1.5rem', 
+                backgroundColor: 'var(--gray-50)', 
+                borderRadius: '0.5rem' 
+              }}>
+                <h3 style={{ 
+                  fontWeight: '600', 
+                  color: 'var(--gray-900)', 
+                  marginBottom: '1rem'
+                }}>
+                  Our Office Locations
+                </h3>
+                <div style={{ fontSize: '0.875rem', color: 'var(--gray-600)', lineHeight: '1.6' }}>
+                  <p><strong>Cape Town:</strong> Old Marine Drive</p>
+                  <p><strong>Queenstown:</strong> Queenstown Station</p>
+                  <p><strong>East London:</strong> East London Station</p>
+                  <p><strong>Port Elizabeth:</strong> Port Elizabeth Station</p>
+                  <p><strong>King William's Town:</strong> King William's Town Station</p>
+                  <p><strong>Mthatha:</strong> Mthatha Station</p>
+                  <p><strong>Johannesburg:</strong> 8Park Station</p>
+                </div>
+                <a 
+                  href="/booking#offices"
+                  className="btn btn-outline btn-small"
+                  style={{ textDecoration: 'none', marginTop: '1rem', display: 'inline-block' }}
+                >
+                  View All Offices
+                </a>
               </div>
             </div>
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <h2 style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--gray-900)', marginBottom: '2rem' }}>
+                Send Us a Message
+              </h2>
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div className="grid grid-2" style={{ gap: '1.5rem' }}>
+                  <div className="form-group">
+                    <label htmlFor="name" className="form-label">
                       Full Name *
                     </label>
                     <input
@@ -117,12 +170,12 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="form-input"
                       placeholder="Your full name"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <div className="form-group">
+                    <label htmlFor="email" className="form-label">
                       Email Address *
                     </label>
                     <input
@@ -132,14 +185,14 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="form-input"
                       placeholder="your.email@example.com"
                     />
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <div className="grid grid-2" style={{ gap: '1.5rem' }}>
+                  <div className="form-group">
+                    <label htmlFor="phone" className="form-label">
                       Phone Number
                     </label>
                     <input
@@ -148,12 +201,12 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="form-input"
                       placeholder="Your phone number"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <div className="form-group">
+                    <label htmlFor="subject" className="form-label">
                       Subject *
                     </label>
                     <select
@@ -162,7 +215,7 @@ const Contact = () => {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="form-select"
                     >
                       <option value="">Select a subject</option>
                       <option value="booking">Booking Inquiry</option>
@@ -170,12 +223,14 @@ const Contact = () => {
                       <option value="complaint">Complaint</option>
                       <option value="compliment">Compliment</option>
                       <option value="lost-found">Lost & Found</option>
+                      <option value="group-booking">Group Booking</option>
+                      <option value="refund">Refund Request</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
                 </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <div className="form-group">
+                  <label htmlFor="message" className="form-label">
                     Message *
                   </label>
                   <textarea
@@ -185,19 +240,104 @@ const Contact = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="form-textarea"
                     placeholder="Please provide details about your inquiry..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                  className="btn btn-primary btn-large"
+                  style={{ 
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem'
+                  }}
                 >
                   <Send size={20} />
                   <span>Send Message</span>
                 </button>
               </form>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Contact Information */}
+      <section className="section bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--gray-900)', marginBottom: '1rem' }}>
+              More Ways to Reach Us
+            </h2>
+            <p style={{ fontSize: '1.25rem', color: 'var(--gray-600)' }}>
+              Choose the method that works best for you
+            </p>
+          </div>
+          
+          <div className="grid grid-3">
+            <div className="card text-center">
+              <Phone style={{ height: '3rem', width: '3rem', color: 'var(--primary-600)', margin: '0 auto 1rem' }} />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '1rem' }}>Call Center</h3>
+              <p style={{ color: 'var(--gray-600)', marginBottom: '1rem' }}>
+                Speak directly with our customer service team for immediate assistance
+              </p>
+              <a href="tel:021-100-5126" className="btn btn-outline">
+                021 100 5126
+              </a>
+            </div>
+            
+            <div className="card text-center">
+              <Mail style={{ height: '3rem', width: '3rem', color: 'var(--primary-600)', margin: '0 auto 1rem' }} />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '1rem' }}>Email Support</h3>
+              <p style={{ color: 'var(--gray-600)', marginBottom: '1rem' }}>
+                Send us an email and we'll respond within 24 hours
+              </p>
+              <a href="mailto:Info@apmwesterncape.com" className="btn btn-outline">
+                Send Email
+              </a>
+            </div>
+            
+            <div className="card text-center">
+              <MapPin style={{ height: '3rem', width: '3rem', color: 'var(--primary-600)', margin: '0 auto 1rem' }} />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '1rem' }}>Visit Our Offices</h3>
+              <p style={{ color: 'var(--gray-600)', marginBottom: '1rem' }}>
+                Get face-to-face assistance at any of our 7 office locations
+              </p>
+              <a href="/booking#offices" className="btn btn-outline">
+                Find Offices
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Emergency Contact */}
+      <section className="section" style={{ backgroundColor: 'var(--primary-900)', color: 'white' }}>
+        <div className="container text-center">
+          <h2 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1rem' }}>
+            Need Immediate Assistance?
+          </h2>
+          <p style={{ fontSize: '1.125rem', color: 'var(--primary-200)', marginBottom: '2rem' }}>
+            Our team is available daily from 05:00 to 20:00
+          </p>
+          <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a
+              href="tel:021-100-5126"
+              className="btn btn-secondary"
+              style={{ textDecoration: 'none' }}
+            >
+              <Phone size={20} />
+              <span>Call Now: 021 100 5126</span>
+            </a>
+            <a
+              href="mailto:Info@apmwesterncape.com"
+              className="btn btn-outline"
+              style={{ color: 'white', borderColor: 'white', textDecoration: 'none' }}
+            >
+              <Mail size={20} />
+              <span>Email Us</span>
+            </a>
           </div>
         </div>
       </section>
