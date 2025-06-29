@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
 
         {/* Routes Summary */}
-        <div style={{ borderTop: '1px solid var(--gray-800)', marginTop: '2rem', paddingTop: '2rem' }}>
+        {/* <div style={{ borderTop: '1px solid var(--gray-800)', marginTop: '2rem', paddingTop: '2rem' }}>
           <h3 className="footer-title">Our Routes</h3>
           <div className="grid grid-2">
             <div style={{ backgroundColor: 'var(--gray-800)', borderRadius: '0.5rem', padding: '1rem' }}>
@@ -107,7 +107,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="footer-bottom flex-between">
