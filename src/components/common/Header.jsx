@@ -22,14 +22,34 @@ const Header = () => {
       {/* Top contact bar */}
       <div className="header-top">
         <div className="container flex-between">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.875rem' }}>
+          <div style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '1rem', 
+            fontSize: '0.875rem',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
               <Phone size={14} />
               <span>021 100 5126</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '0.25rem',
+              textAlign: 'center'
+            }}>
               <MapPin size={14} />
-              <span>Cape Town • Mthatha • Queenstown • East London • King Williams Town • Port Elizabeth • JHB • PTA </span>
+              <span style={{ 
+                display: 'inline',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis'
+              }}>
+                <span className="mobile-hide">Cape Town • Mthatha • Queenstown • East London • King Williams Town • Port Elizabeth • JHB • PTA</span>
+                <span className="mobile-show" style={{ display: 'none' }}>7 Locations Nationwide</span>
+              </span>
             </div>
           </div>
           <Link 
@@ -71,6 +91,7 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="mobile-menu-btn"
+              aria-label="Toggle mobile menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
